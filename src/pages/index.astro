@@ -1,11 +1,64 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Medium from "../components/icons/Medium.astro";
+import Mail from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import { Image } from 'astro:assets';
+import profileImage from '../../public/DIO.jpeg';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Guillermo Duque's Portfolio" description="Backend Developer">
+    <main class="px-4">
+        <SectionContainer >
+            <Image
+                    class="rounded-full size-1/6 mb-4"
+                    src={profileImage}
+                    alt="profile"
+                    loading="eager"
+            />
+
+            <h1 class="text-white text-xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 whitespace-nowrap">
+                Hey, I'm Guillermo Duque <a
+                    href="https://www.linkedin.com/in/guillermo-duque-s%C3%A1nchez/"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex justify-center items-center"
+            >
+                <div>
+                    <Badge>Available to Work</Badge>
+                </div>
+            </a>
+            </h1>
+            <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+                Over 7 years of experience.
+                <span class="text-green-500">Backend Developer</span> based in Santiago,
+                Chile.</h2>
+            <nav class="flex gap-4 px-1 mt-4 flex-wrap">
+                <SocialPill href="https://www.linkedin.com/in/guillermo-duque-s%C3%A1nchez/">
+                    <LinkedIn class="size-6"/>
+                    LinkedIn
+                </SocialPill>
+                <SocialPill href="https://medium.com/@gui.duquesanchez">
+                    <Medium class="size-6"/>
+                    Medium
+                </SocialPill>
+                <SocialPill href="mailto:gui.duquesanchez@gmail.com">
+                    <Mail class="size-6" />
+                    gui.duquesanchez@gmail.com
+                </SocialPill>
+            </nav>
+        </SectionContainer>
+        <SectionContainer id="experience">
+            <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+                <Briefcase class="size-7"/>
+                Job Experience
+            </h2>
+            <Experience/>
+        </SectionContainer>
+    </main>
 </Layout>
