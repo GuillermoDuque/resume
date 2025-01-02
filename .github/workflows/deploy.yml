@@ -27,3 +27,14 @@ jobs:
       # 4. Construir el proyecto
       - name: Build the project
         run: npm run build
+
+      # 5. Crear el archivo .nojekyll
+      - name: Disable Jekyll
+        run: echo > dist/.nojekyll
+
+      # 6. Subir a GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
