@@ -13,10 +13,10 @@ import profileImage from '../../public/DIO.jpeg';
 ---
 
 <Layout title="Guillermo Duque's Portfolio" description="Backend Developer">
-    <main class="px-4">
-        <SectionContainer >
+    <main class="pt-20">
+        <SectionContainer class="pl-2 lg:pl-0">
             <Image
-                    class="rounded-full size-1/6 mb-4"
+                    class="rounded-full size-2/6  lg:size-1/6 mb-4 ml-28 lg:ml-0 image-hover-effect"
                     src={profileImage}
                     alt="profile"
                     loading="eager"
@@ -53,8 +53,8 @@ import profileImage from '../../public/DIO.jpeg';
                 </SocialPill>
             </nav>
         </SectionContainer>
-        <SectionContainer id="experience">
-            <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+        <SectionContainer id="experience" class="pl-1 lg:p-0">
+            <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
                 <Briefcase class="size-7"/>
                 Job Experience
             </h2>

@@ -15,17 +15,18 @@ const {title, description} = Astro.props
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/svg+xml" href="/code.png"/>
+    <link rel="icon" type="image/svg+xml" href="/GD.png"/>
     <meta name="generator" content={Astro.generator}/>
     <meta name="description" content={description}/>
     <title>{title}</title>
 </head>
 <body>
-    <div class="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-    <Header/>
-    <slot/>
-    <Footer/>
-    </div>
+<div class="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+</div>
+<Header/>
+<slot/>
+<Footer/>
+
 </body>
 </html>
 
@@ -46,6 +47,7 @@ const {title, description} = Astro.props
         height: 100vh;
 
     }
+
 
     @media (prefers-reduced-motion: reduce) {
         html {
