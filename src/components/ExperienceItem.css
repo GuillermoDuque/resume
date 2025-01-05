@@ -1,0 +1,23 @@
+.timeline-dot {
+    @apply absolute size-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white
+}
+
+.timeline-date {
+    @apply mb-1 text-sm font-normal leading-none text-gray-200/90
+}
+
+.job-title {
+    @apply text-lg font-semibold text-green-500 mt-2
+}
+
+.job-description {
+    @apply mb-4 text-base font-normal text-gray-200 text-pretty
+}
+
+.job-link {
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700
+}
+
+.timeline-icon {
+    @apply size-3 ms-2 rtl:rotate-180
+}

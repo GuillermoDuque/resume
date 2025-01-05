@@ -1,12 +1,14 @@
-
-<footer class="rounded-lg shadow bg-black/20 backdrop-blur-lg m-4 w-full xl:w-[1120px] mx-auto">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="/GD.png" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap ">Guillermo Duque</span>
+---
+import "./Footer.css"
+---
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <a class="footer-brand">
+                <img src="/GD.png" class="h-8" alt="GD Logo"/>
+                <span class="footer-name">Guillermo Duque</span>
             </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
+            <ul class="footer-links">
                 <li>
                     <a href="#" class="hover:underline me-4 md:me-6">About</a>
                 </li>
@@ -15,8 +17,8 @@
                 </li>
             </ul>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center ">© 2025 <a href="https://flowbite.com/" class="hover:underline">Guillermo Duque™</a>. All Rights Reserved.</span>
+        <hr class="footer-divider"/>
+        <span class="footer-rights">© 2025 <a href="https://flowbite.com/" class="hover:underline">Guillermo Duque™</a>. All Rights Reserved.</span>
     </div>
 </footer>
 
