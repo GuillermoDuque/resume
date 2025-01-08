@@ -1,19 +1,21 @@
 ---
 import "./Footer.css"
+import { Image } from 'astro:assets';
+import brandImage from '../../public/GD.png';
 ---
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-content">
-            <a class="footer-brand">
-                <img src="/GD.png" class="h-8" alt="GD Logo"/>
+            <span class="footer-brand">
+                <Image src={brandImage} class="size-8 " alt="GD Logo" loading="lazy"/>
                 <span class="footer-name">Guillermo Duque</span>
-            </a>
+            </span>
             <ul class="footer-links">
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    <a href="#top" class="hover:underline me-4 md:me-6">About</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline">Contact</a>
+                    <a href="mailto:gui.duquesanchez@gmail.com" class="hover:underline">Contact</a>
                 </li>
             </ul>
         </div>
